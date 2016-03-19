@@ -1,4 +1,4 @@
-function tarefa1() 
+function x = tarefa1() 
     A = [0 0 0 0 0 0 0 1/2;
          1/2 0 0 0 0 0 0 0;
          1/2 1/2 0 0 0 0 0 1/2;
