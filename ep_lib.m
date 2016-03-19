@@ -33,5 +33,15 @@ function x = rotinaPrincipal(A, m)
         xAnterior = x;
         x = (1-m)*multiplica(V,C,L, x) + m*x0;
     end
+    mostraPaginasOrdenadas(x);
 end
 
+function mostraPaginasOrdenadas(x) 
+    [z,w] = size(x);
+    A = [transpose([1:z]), x];
+    B = sortrows(A,-2);
+    printf("Paginas mais importantes: \n");
+    for i=1:z
+        printf("Pagina %d - Importancia: %f\n", B(i, 1), B(i, 2));
+    end
+end
