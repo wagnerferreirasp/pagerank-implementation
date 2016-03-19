@@ -16,8 +16,8 @@ end
 
 function y = multiplica(V,C,L,x) 
     [m,l] = size(V);
-    n = size(x);
-    y = zeros(n,1);
+    [z,w] = size(x);
+    y = zeros(z,1);
     for i=1:l
         y(L(i)) = y(L(i)) + V(i)*x(C(i));
     end
