@@ -5,7 +5,7 @@ function [V,C,L] = encontraVCL(A)
     L = [];
     for i=1:n
         for j=1:n
-            if (A(i,j) != 0)
+            if (A(i,j) > 0)
                 V = [V, A(i,j)];
                 L = [L, i];
                 C = [C, j];
@@ -27,9 +27,9 @@ function mostraPaginasOrdenadas(x)
     [z,w] = size(x);
     A = [transpose([1:z]), x];
     B = sortrows(A, -2);
-    printf("Paginas mais importantes: \n");
+    printf('Paginas mais importantes: \n');
     for i=1:z
-        printf("Pagina %d - Importancia: %f\n", B(i, 1), B(i, 2));
+        printf('Pagina %d - Importancia: %f\n', B(i, 1), B(i, 2));
     end
 end
 
