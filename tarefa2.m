@@ -30,7 +30,8 @@ function mostraPaginasOrdenadas(x)
     end
     B = sortrows(Acompacto, -2); % ordena A do maior para o menor na coluna 2 
     printf('Pagina\tImportancia \n');   
-    for i=1:n
+    [m,z] = size(B);
+    for i=1:m
         printf('%d\t%f\n', B(i, 1), B(i, 2));
     end
 end
