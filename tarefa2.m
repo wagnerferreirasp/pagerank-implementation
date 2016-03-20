@@ -21,10 +21,17 @@ end
 function mostraPaginasOrdenadas(x) 
     [n,w] = size(x);
     A = [transpose([1:n]), x]; % A = [identificacao das paginas (1:n), vetor de importancias]
-    B = sortrows(A, -2); % ordena A do maior para o menor na coluna 2 
-    printf('Paginas mais importantes: \n');
+    Acompacto = [];
+    for i=1:20
+        cacique = i*(i+1)/2;
+        indioRepresentante = cacique+1;
+        Acompacto = [Acompacto; cacique x(cacique)];
+        Acompacto = [Acompacto; indioRepresentante x(indioRepresentante)];
+    end
+    B = sortrows(Acompacto, -2); % ordena A do maior para o menor na coluna 2 
+    printf('Pagina\tImportancia \n');   
     for i=1:n
-        printf('Pagina %d - Importancia: %f\n', B(i, 1), B(i, 2));
+        printf('%d\t%f\n', B(i, 1), B(i, 2));
     end
 end
 
