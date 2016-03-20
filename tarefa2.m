@@ -5,8 +5,8 @@ function tarefa2()
     L = [];
     for i = 1 : 20
         cacique = i*(i+1)/2;
-        V = [V; ones(i,1)/i];                 % Meus índios me apontam e 1/i apontam pra cada um deles
-        L = [L; ones(i,1)*cacique];           % Na minha linha
+        V = [V; ones(i,1)/i];               % Meus índios me apontam e 1/i apontam pra cada um deles
+        L = [L; ones(i,1)*cacique];         % Na minha linha
         for j = cacique+1 : cacique+i   
             C = [C; j];                     % Na coluna de cada índio
         end 
@@ -20,7 +20,7 @@ function tarefa2()
         for l = cacique+1 : cacique+i       % Para cada indio desse grupo i
             L = [L; l];                     % Na linha desse índio
             C = [C; cacique];               % O cacique aponta para o índio
-            V = [V; 1/(20 - 1 + i)];         % Os outros caciques (20-1) apontam para cacique e seus índios também (+i)
+            V = [V; 1/(20 - 1 + i)];        % Os outros caciques (20-1) apontam para cacique e seus índios também (+i)
             for c = cacique+1 : cacique+i   % Os outros índios me apontam
                 C = [C; c];
                 L = [L; l];
