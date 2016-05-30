@@ -1,3 +1,6 @@
+% Dizendo ao octave que esse é um arquivo de script e não de função única:
+1;
+
 % Multiplica uma matriz A mxn, em sua forma [V,C,L], por x
 % Tem o mesmo efeito de calcular Ax mas, caso A seja esparsa, 
 % essa funcao evita multiplicar os zeros da matriz
@@ -24,7 +27,9 @@ function mostraPaginasOrdenadas(x)
     Acompacto = [];
     for i=1:20
         cacique = i*(i+1)/2;
-        indioRepresentante = cacique+1;
+        % índio representante é o primeiro índio da tribo, já que os índios de uma tribo tem as mesmas
+        % importâncias. Logo, basta mostrar apenas um na saída.
+        indioRepresentante = cacique+1; 
         Acompacto = [Acompacto; cacique x(cacique)];
         Acompacto = [Acompacto; indioRepresentante x(indioRepresentante)];
     end
@@ -51,7 +56,9 @@ function rotinaPrincipal(V, C, L, m, n)
     mostraPaginasOrdenadas(x);
 end
 
-function tarefa2() 
+% Tarefa 2 do Exercicio-Programa: 
+% Mostrar as importancias das paginas da tribo
+function main() 
     V = [];
     C = [];
     L = [];
@@ -84,3 +91,6 @@ function tarefa2()
     end
     rotinaPrincipal(V, C, L, 0.15, 230);
 end
+
+% Executa todo o script
+main(); 

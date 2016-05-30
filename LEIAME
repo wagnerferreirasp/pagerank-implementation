@@ -1,0 +1,35 @@
+===== Linguagem
+O EP foi escrito em octave (MATLAB). 
+Isso nos ajudou muito, dado que para multiplicar vetores é uma ótima ferramenta.
+Além disso, funções para ordenar vetores e preencher o vetor com zeros foram bem úteis da linguagem.
+
+===== Arquivos
+tarefa1.m
+	Faz a tarefa 1 do enunciado, como se pede.
+tarefa2.m  
+	Faz a tarefa 2 do enunciado, como se pede.
+O código está bem comentado, acima das assinaturas das funções e nas partes específicas do código, 
+para melhor entendimento.
+
+===== Enunciado
+Seguimos as sugestões do enunciado, como: 
+- multiplicar uma matriz esparsa através dos vetores V,C e L
+- ordenar por importância as páginas
+- na tarefa2, mostrar só um índio por tribo, já que as importâncias são iguais.
+
+===== Como rodar
+Para rodar, é necessário ter o octave instalado. Caso não tenha, em um terminal linux execute:
+sudo apt install octave
+
+Com o octave instalado, para:
+- Executar a tarefa 1, execute no terminal:
+	octave taarefa1.m
+- Executar a tarefa 2, execute no terminal:
+	octave taarefa2.m
+
+===== Integrantes do grupo:
+Diego Martin Mancini 6799920
+Evelyne Machado Amorim 8940702
+Marllon Nascimento Pinto 8940699
+Pedro Alves de Medeiros Scocco 7558183
+Wagner Ferreira Alves 7577319
