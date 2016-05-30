@@ -1,2 +1,3 @@
-# map2210
-Exercícios sobre MAP2210 - Aplicações de Álgebra Linear
+# map2210 - Google PageRank
+Exercícios programa de MAP2210 - Aplicações de Álgebra Linear
+
